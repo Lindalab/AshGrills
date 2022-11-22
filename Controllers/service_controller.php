@@ -3,11 +3,11 @@
 include("../Classes/service_class.php");
 
 
-function createService_ctr($service_name, $cat_id, $time, $price, $service_image)
+function createService_ctr($service_name, $cat_id,$price, $service_image)
 {
     $insertservice= new service();
 
-    return $insertservice->createService($service_name, $cat_id, $time, $price, $service_image);
+    return $insertservice->createService($service_name, $cat_id,$price, $service_image);
 }
 
 function getAllService_ctr()
@@ -18,11 +18,11 @@ function getAllService_ctr()
 }
 
 
-function updateService_ctr($s_id, $service_name, $cat_id, $time, $price)
+function updateService_ctr($s_id, $service_name, $cat_id, $price,$service_image, )
 {
     $updateservice= new service();
 
-    return $updateservice->updateService($s_id, $service_name, $cat_id, $time, $price);
+    return $updateservice->updateService($s_id, $service_name, $cat_id, $price,$service_image, );
 }
 
 function   deleteService_ctr($s_id)
@@ -32,7 +32,7 @@ function   deleteService_ctr($s_id)
     return $selectservice->deleteService($s_id);
 }
 
-function getOneService($s_id){
+function getOneService_ctr($s_id){
     $selectservice= new service;
 
     return $selectservice->getOneService($s_id);

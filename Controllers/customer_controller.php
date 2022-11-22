@@ -8,18 +8,18 @@ include("../Classes/customer_class.php");
 
 
 //--INSERT--//
-function customer_register_ctr($email,$Password,$Number,$name,$Businessname,$student_id,$user_role)
+function customer_register_ctr($name,$email,$password,$number,$businessname,$student_id,$user_role)
 {
     $newuser_added= new customer_class();
 
-    return $newuser_added->customer_register_cls($email,$Password,$Number,$name,$Businessname,$student_id,$user_role);
+    return $newuser_added->customer_register_cls($name,$email,$password,$number,$businessname,$student_id,$user_role);
 }
 
-function select_customer_ctr($email,$Password){
+function select_customer_ctr($email,$password){
 
     $add= new customer_class();
     
-    return $add->select_customer_cls($email,$Password);
+    return $add->select_customer_cls($email,$password);
 }
 
 
