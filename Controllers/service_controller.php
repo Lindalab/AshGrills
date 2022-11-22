@@ -1,0 +1,51 @@
+<?php
+//connect to the user account class
+include("../Classes/service_class.php");
+
+
+function createService_ctr($service_name, $cat_id, $time, $price, $service_image)
+{
+    $insertservice= new service();
+
+    return $insertservice->createService($service_name, $cat_id, $time, $price, $service_image);
+}
+
+function getAllService_ctr()
+{
+    $selectservice= new service();
+
+    return $selectservice->getAllService();
+}
+
+
+function updateService_ctr($s_id, $service_name, $cat_id, $time, $price)
+{
+    $updateservice= new service();
+
+    return $updateservice->updateService($s_id, $service_name, $cat_id, $time, $price);
+}
+
+function   deleteService_ctr($s_id)
+{
+    $selectservice= new service;
+
+    return $selectservice->deleteService($s_id);
+}
+
+function getOneService($s_id){
+    $selectservice= new service;
+
+    return $selectservice->getOneService($s_id);
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
