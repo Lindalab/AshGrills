@@ -32,5 +32,35 @@
         return $book->getAllBooking();
     }
 
+    function insertIntoBookedSlot_ctr($book_id, $order_id, $currency, $payment_date){
+        $book = new Booking;
+
+        return $book->insertIntoBookedSlot($book_id, $order_id, $currency, $payment_date);
+    }
+
+    function updateBookedSlots_ctr($book_id, $order_id, $currency, $payment_date){
+        $book = new Booking;
+
+        return $book->updateBookedSlots($book_id, $order_id, $currency, $payment_date);
+    } 
+
+    function deleteBookedSlots($booked_slot_id){
+        $book = new Booking;
+
+        return $book->deleteBookedSlots($booked_slot_id);
+    }
+
+    function getAllBookedSlots(){
+        $book = new Booking;
+
+        return $book->getAllBookedSlots();
+    }
+
+    function getOneBookingSlot($book_slot_id){
+        $book = new Booking;
+
+        return $book->getOneBookingSlot($book_slot_id);
+    }
+
 
 ?>
