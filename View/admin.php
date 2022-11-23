@@ -78,15 +78,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="services.php" class="nav-item nav-link " >Services</a> -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalService">
-                Add a service   
-                </button>
+                <a href="services.php" class="nav-item nav-link" >Appointment</a>
+              
                 </div>
                 <!-- <a href="contact.php" class="nav-item nav-link active">Contact</a> -->
             </div>
+            <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalCategory">
+               Create Cateogory  
+            </a>
+            <span>&nbsp;</span>
+            <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalAppointment">
+               Create Appointment  
+            </a>
+            <span>&nbsp;</span>
+            <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalService">
+                Add a service   
+            </a>
+            <span>&nbsp;</span>
             <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>
     </nav>
@@ -192,8 +202,51 @@
     
 
 
-<!-- Modal -->
+<!-- Modal For Service-->
 <div class="modal fade" id="exampleModalService" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Create Service</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal For Appointment-->
+<div class="modal fade" id="exampleModalAppointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Create Service</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal For Categories-->
+<div class="modal fade" id="exampleModalCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCategory" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
