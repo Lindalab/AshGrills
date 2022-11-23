@@ -27,7 +27,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -68,8 +68,8 @@
     <!-- Topbar End -->
 
 
-     <!-- Navbar Start -->
-     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.php" class="navbar-brand ms-4 ms-lg-0">
             <h1 class="text-primary m-0"><img class="me-3" src="img/iconash.png" alt="Icon">AshGrill</h1>
         </a>
@@ -78,16 +78,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="services.php" class="nav-item nav-link " >Services</a> -->
-                <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalService">
-                Add a service   
-                </a>
-                </div>
-                <!-- <a href="contact.php" class="nav-item nav-link active">Contact</a> -->
+                <a href="services.php" class="nav-item nav-link" >Appointment</a> -->
+
             </div>
-            <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
+            <!-- <a href="contact.php" class="nav-item nav-link active">Contact</a> -->
+        </div>
+        <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalCategory">
+            Create Cateogory
+        </a>
+        <span>&nbsp;</span>
+        <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalAppointment">
+            Create Appointment
+        </a>
+        <span>&nbsp;</span>
+        <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalService">
+            Add a service
+        </a>
+        <span>&nbsp;</span>
+        <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -189,47 +199,122 @@
 
     <!-- Button trigger modal -->
 
-    
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalService" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
 
-                                <form action="../Login/register_process.php" method="GET">
+    <!-- Modal For Service-->
+    <div class="modal fade" id="exampleModalService" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <form action="../Login/register_process.php" method="GET">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formName">Serivce Name</label>
+                            <input type="text" id="formEmail" name="service_name" class="form-control" placeholder="full name" required />
+                        </div>
+
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formEmail">Categories</label>
+                            <input type="email" id="formEmail" name="email" class="form-control" placeholder="Email address" required />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formPassword">Price</label>
+                            <input type="password" id="formPassword" name="price" class="form-control" required />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formCountry">Service Image</label>
+                            <input type="file" id="formCountry" name="service_image" class="form-control" placeholder="Country" />
+                        </div>
+
+
+                        <div class="text-center pt-1 mb-5 pb-1">
+                            <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" class="form-control" name="submit" value="Register" />
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Service</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal For Appointment-->
+    <div class="modal fade" id="exampleModalAppointment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="GET">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formName">Appointment Date</label>
+                            <input type="date" id="formEmail" name="appointment_date" class="form-control" placeholder="full name" required />
+                        </div>
+
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formEmail">Appointment day</label>
+                            <input type="email" id="formEmail" name="appointment_day" class="form-control" placeholder="Email address" required />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="formPassword">Appointment time</label>
+                            <input type="password" id="formPassword" name="price" class="form-control" required />
+                        </div>
+
+
+
+
+                        <div class="text-center pt-1 mb-5 pb-1">
+                            <input type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" class="form-control" name="submit" value="Register" />
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Service</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal For Categories-->
+    <div class="modal fade" id="exampleModalCategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalCategory" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form action="" method="GET">
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="formName">Serivce Name</label>
+                                            <label class="form-label" for="formName">Category Name</label>
                                             <input type="text" id="formEmail" name="service_name" class="form-control"
                                                 placeholder="full name" required />
                                         </div>
-
-
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="formEmail">Categories</label>
-                                            <input type="email" id="formEmail" name="email" class="form-control"
-                                                placeholder="Email address" required />
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="formPassword">Price</label>
-                                            <input type="password" id="formPassword" name="price"
-                                                class="form-control" required />
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="formCountry">Service Image</label>
-                                            <input type="file" id="formCountry" name="service_image" class="form-control"
-                                                placeholder="Country" />
-                    </div>
 
 
                                         <div class="text-center pt-1 mb-5 pb-1">
@@ -239,22 +324,20 @@
 
                                         </div>
                                         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Create Service</button>
-      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create Service</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
     <!-- Contact End -->
 
 
     <!-- Google Map Start -->
     <div class="container-xxl pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-        <iframe class="w-100 mb-n2" style="height: 450px;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="w-100 mb-n2" style="height: 450px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <!-- Google Map End -->
 
@@ -333,8 +416,8 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
