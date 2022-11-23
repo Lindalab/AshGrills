@@ -12,27 +12,25 @@
 
     $newpassword= password_hash($password, PASSWORD_DEFAULT);
 
-    // customer_register_ctr("hello","email","passwod","00000","bus name","000000","user role");
+    if(checkIfEmailExist_ctr($email)===NULL){
+        $addcustomer = customer_register_ctr($name,$email,$newpassword,$number,$businessname,$student_id,$user_role);
 
-    // if(checkIfEmailExist_ctr($email)===NULL){
-    //     $addcustomer=customer_register_ctr($name,$email,$newpassword,$number,$businessname,$student_id,$user_role);
+        echo $addcustomer;
+        if($addcustomer){
+            header("location:../View/login.php");
+        }
+        else{
+            echo "<script>
+            alert('Wrong inputs');
+            </script>";
+        }
+    }
+    else{
+        echo "<script>
+        alert('Email already exist');
+        </script>";
 
-    //     echo $addcustomer;
-    //     if($addcustomer){
-    //         header("location:../View/login.php");
-    //     }
-    //     else{
-    //         echo "<script>
-    //         alert('Wrong inputs');
-    //         </script>";
-    //     }
-    // }
-    // else{
-    //     echo "<script>
-    //     alert('Email already exist');
-    //     </script>";
-
-    // }
+    }
 
     }
   

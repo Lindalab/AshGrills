@@ -91,7 +91,7 @@ CREATE TABLE `categories` (
 --
 
 CREATE TABLE `customer` (
-  `customer_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL ,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -202,6 +202,9 @@ ALTER TABLE `service`
 --
 ALTER TABLE `appointments`
   MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT;
+
+  ALTER TABLE `customer`
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `book`

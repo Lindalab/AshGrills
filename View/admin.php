@@ -81,9 +81,9 @@
                 <!-- <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link " >Services</a> -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="exampleModalService">
-  Add a service
-</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalService">
+                Add a service   
+                </button>
                 </div>
                 <!-- <a href="contact.php" class="nav-item nav-link active">Contact</a> -->
             </div>
@@ -207,7 +207,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Create Service</button>
       </div>
     </div>
   </div>
