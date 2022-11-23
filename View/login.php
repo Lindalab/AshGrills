@@ -77,12 +77,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <!-- <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link">Services</a>
-                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a> -->
             </div>
-            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
         </div>
         <a href="../Login/login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Book Now!</a>
         </div>
@@ -109,7 +109,7 @@
                                     </div>
 
 
-                                    <form action="./View/loginprocess.php" method="POST">
+                                    <form action="../Login/loginprocess.php" method="POST">
 
 
                                         <div class="form-outline mb-4">

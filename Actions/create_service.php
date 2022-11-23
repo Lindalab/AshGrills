@@ -4,7 +4,6 @@
 
     $service_name = $_GET['service_name'];
     $cat_id = $_GET['cat_id'];
-    $time = $_GET['time'];
     $price = $_GET['price'];
 
     $user_file_name = $_FILES['user_image']['name'];
@@ -15,7 +14,7 @@
     $move = move_uploaded_file($_FILES["user_image"]['tmp_name'], $full_dir);
 
     if($move){
-        $created = createService_ctr($service_name, $cat_id, $time, $price, $service_image);
+        $created = createService_ctr($service_name, $cat_id,$price, $service_image);
         if($created){
             echo "<script>alert('Service Created Successfully')</script>";
             header("location: ../View/index.php");

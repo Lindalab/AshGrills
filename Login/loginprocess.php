@@ -1,34 +1,47 @@
 <?php
-include ('../Controllers/customer_controller.php');
-// include ('../Settings/core.php');
+require_once("../Controllers/customer_controller.php");
 
-
-/**
- * Get the data from the login form and pass it ot the Login controller function
- */
-if (isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $Password = $_POST['password'];
-
-    $check = select_customer_ctr($c_email,$c_pass);
+    $password = $_POST['password'];
     
-    if ($check)
-    {
-        //Start session and set session id
-        session_start();
-        $_SESSION['cid'] = $check['customer_id'];
-        $_SESSION['role'] = $check['user_role'];
 
-        if ($_SESSION['role']==1){
-            header ('Location:../Admin/admin_index.php');
+    //check if email 
+    $login = checkAndGetCredentials_ctr($email);
+    
+    if ($login) {
+        $hashpassword = $login['password'];
+       
+        if (password_verify($password, $hashpassword)) {
+            session_start();
+            $_SESSION['customerId'] = $login['customer_id'];
+            $_SESSION['customerName'] = $login['name'];
+            $_SESSION['customerEmail'] = $login['email'];
+            $_SESSION['customerPasswd'] = $login['password'];
+            $_SESSION['number'] = $login['number'];
+            $_SESSION['businessname'] = $login['businessname'];
+            $_SESSION['student_id'] = $login['student_id'];
+            $_SESSION['customerImage'] = $login['customer_image'];
+            $_SESSION['user_role'] = $login['user_role'];
+            $_SESSION['userLogin'] = true;
+            if($_SESSION['user_role'] == 1 ){
+                header("location:../View/admin.php");
+
+                
+            }
+            else{
+                header("location:../View/booking.php");
+
+            }
+
+          
+        } else {
+            echo 'Invalid password.';
         }
-        else{
-            header('location:../index.php');
-        }
+    } else {
+        echo "Email unaviable";
     }
-    else{
-            echo"Login Unsuccessful";
-        }
-        
 }
+
+?>
         

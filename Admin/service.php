@@ -1,9 +1,4 @@
-<?php
-	// include ("../settings/core.php");	
-	require( "../Controllers/service.php");
-  
-   
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

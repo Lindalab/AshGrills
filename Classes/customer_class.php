@@ -14,20 +14,31 @@ class customer_class  extends db_connection{
 		return $this->db_query($mysql);
 		
 		
-		
 	}
 
 
 	function select_customer_cls($email,$password){
 		$mysql ="SELECT * FROM `customer` WHERE `email` = '$email'AND `password` ='$password'";
 		
-		return $this->db_query($mysql);
+		return $this->db_fetch_all($mysql);
 	}
 
-	
+	function checkIfEmailExist($email){
+		$sql="SELECT `email` FROM `customer` WHERE  `email`='$email';";
+		return $this->db_fetch_one($sql);
+	}
 
-	
-	
+	function checkAndGetCredentials($email){
+		$mysql ="SELECT * FROM `customer` WHERE `email` = '$email' ";
+		
+		return $this->db_fetch_one($mysql);
+	}
 	
 }
+
+
+
+
+
+
 ?>

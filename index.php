@@ -82,7 +82,7 @@
                 <a href="View/services.php" class="nav-item nav-link">Services</a>
                 <a href="appointment.php" class="nav-item nav-link">Appointments</a>
                 </div>
-                <a href="View/contact.php" class="nav-item nav-link">Contact</a>
+                <!-- <a href="View/contact.php" class="nav-item nav-link">Contact</a> -->
             </div>
             <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>

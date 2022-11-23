@@ -77,12 +77,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <!-- <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link">Services</a>
-                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a> -->
             </div>
-            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
         </div>
         <a href="../Login/login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Book Now!</a>
         </div>
@@ -108,7 +108,7 @@
                                     </div>
 
 
-                                    <form action="../View/registerprocess.php" method="POST">
+                                    <form action="../Login/register_process.php" method="GET">
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="formName">Full Name</label>
                                             <input type="text" id="formEmail" name="name" class="form-control"
@@ -155,13 +155,14 @@
                                                 class="form-control" name="submit" value="Register" />
 
                                         </div>
+                                        </form>
 
                                         <div class="d-flex align-items-center justify-content-center pb-4">
                                             <p class="mb-0 me-2">Already have an account?</p>
                                             <a href="login.php" class="btn btn-primary">Login</a>
                                         </div>
 
-                                    </form>
+                                   
 
                                 </div>
                             </div>
