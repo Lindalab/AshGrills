@@ -38,6 +38,19 @@ $$booked_slot_id = insertIntoBookedSlot_ctr($customer_id,$invoice_no, $currency,
    $currency =$result['data']['currency'];
    $payment_date=date("Y-m-d");
    $finalresult=payment_process($amount, $customer_id, $currency, $payment_Date, $booked_slot_id);
+
+   $bookings = get0neBookingCustomer_ctr($customer_id);
+
+   foreach($bookings as $book){
+      $appointment_id = $book['appointment_id'];
+      $booked_slot_id = $book['booked_slot_id'];
+      if(insert_into_book_details($appointment_id, $booked_slot_id)){
+        delete_customer_book($customer_id, $appointment_id, $booked_id);
+      }
+   }
+
+   
+  
  }
 
 ?>
