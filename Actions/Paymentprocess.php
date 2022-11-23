@@ -1,8 +1,14 @@
 <?php
 
-
+require_once("../Controllers/payment_process.php");
+require_once("../Controllers/booking_controller.php");
+session_start();
 $ref=$_GET['reference'];
 $curl = curl_init();
+
+$customer_id = $_SESSION['customerId'];
+$bookedslot_status = "success";
+$$booked_slot_id = insertIntoBookedSlot_ctr($customer_id,$invoice_no, $currency, $bookedslot_status);
   
  curl_setopt_array($curl, array(
    CURLOPT_URL => "https://api.paystack.co/transaction/verify/:".$ref,
@@ -31,7 +37,7 @@ $curl = curl_init();
    $amount = $result['data']['amount'];
    $currency =$result['data']['currency'];
    $payment_date=date("Y-m-d");
-   $finalresult=addpayment($amount,$currency,$payment_date,$customer_id);
+   $finalresult=payment_process($amount, $customer_id, $currency, $payment_Date, $booked_slot_id);
  }
 
 ?>

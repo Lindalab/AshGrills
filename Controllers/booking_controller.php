@@ -34,9 +34,17 @@
 
     function insertIntoBookedSlot_ctr($customer_id,$invoice_no, $currency, $bookedslot_status){
         $book = new Booking;
-
+        
         return $book->insertIntoBookedSlot($customer_id,$invoice_no, $currency, $bookedslot_status);
+
+         
     }
+
+    $book = new Booking;
+
+    print_r($book->getDB());
+
+    // echo insertIntoBookedSlot_ctr("1","2222", "ghc", "success");
 
     function updateBookedSlots_ctr($booked_slot_id, $customer_id, $invoice_no, $bookedslot_status){
         $book = new Booking;

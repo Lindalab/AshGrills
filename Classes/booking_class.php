@@ -2,8 +2,9 @@
     require_once("../Settings/db_class.php");
 
     class Booking extends db_connection{
-
+       
         function create_booking($appointment_id, $s_id, $customer_id, $optional_name, $optional_email){
+            
             $sql = "INSERT INTO `book`(`appointment_id`, `s_id`, `customer_id`, `optional_name`, `optional_email`) VALUES ('$appointment_id','$s_id','$customer_id','$optional_name','$optional_email')";
 
             return $this->db_query($sql);
@@ -34,7 +35,9 @@
         function insertIntoBookedSlot($customer_id,$invoice_no, $currency, $bookedslot_status){
             $sql ="INSERT INTO `booked_slots`(`customer_id`, `invoice_no`, `bookedslot_status`) VALUES ('$customer_id','$invoice_no', '$currency', '$bookedslot_status')";
 
-            return $this->db_query($sql);
+            $this->db_query($sql);
+
+            return mysqli_insert_id($this->db);
         }
 
         function updateBookedSlots($booked_slot_id, $customer_id, $invoice_no, $bookedslot_status){
