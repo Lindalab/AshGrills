@@ -108,7 +108,7 @@
                                     </div>
 
 
-                                    <form action="../View/registerprocess.php" method="POST">
+                                    <form action="../login/register_process.php" method="POST">
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="formName">Full Name</label>
                                             <input type="text" id="formEmail" name="name" class="form-control"
