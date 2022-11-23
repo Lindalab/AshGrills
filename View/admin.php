@@ -146,7 +146,7 @@ require("../Functions/getAllCategories.php");
                 <div class="modal-body">
 
 
-                    <form action="../Login/register_process.php" method="GET">
+                    <form action="../Actions/create_service.php" method="post" enctype="multipart/form-data">
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formName">Serivce Name</label>
                             <input type="text" id="formEmail" name="service_name" class="form-control" placeholder="service name" required />
@@ -165,7 +165,9 @@ require("../Functions/getAllCategories.php");
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formCountry">Service Image</label>
-                            <input type="file" id="formCountry" name="service_image" class="form-control" placeholder="Service Image" />
+                            <input type="file" id="formCountry"  class="form-control" placeholder="Service Image"
+                            name="service_image"
+                            />
                         </div>
 
 
@@ -195,21 +197,21 @@ require("../Functions/getAllCategories.php");
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="GET">
+                    <form action="../Actions/create_appointment.php" method="GET">
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formName">Appointment Date</label>
                             <input type="date" id="formEmail" name="appointment_date" class="form-control" placeholder="full name" required />
                         </div>
 
 
-                        <div class="form-outline mb-4">
+                        <!-- <div class="form-outline mb-4">
                             <label class="form-label" for="formEmail">Appointment day</label>
                             <input type="text" id="formEmail" name="appointment_day" class="form-control" placeholder="Email address" required />
-                        </div>
+                        </div> -->
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="formPassword">Appointment time</label>
-                            <input type="time" id="formPassword" name="price" class="form-control" required />
+                            <label class="form-label" name = "appointment_time" for="formPassword">Appointment time</label>
+                            <input type="time" id="formPassword" name="appointment_time" class="form-control" required />
                         </div>
 
 
@@ -243,7 +245,7 @@ require("../Functions/getAllCategories.php");
                 <form action="" method="GET">
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="formName">Category Name</label>
-                                            <input type="text" id="formEmail" name="service_name" class="form-control"
+                                            <input type="text" id="formEmail" name="cat_name" class="form-control"
                                                 placeholder="Category Name" required />
                                         </div>
 

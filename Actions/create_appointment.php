@@ -4,15 +4,21 @@
 
     $appointment_date = $_GET['appointment_date'];
 
-    $appointment_day = $_GET['appointment_day'];
+    $timestamp = strtotime($appointment_date);
+
+    $appointment_day = date('l', $timestamp);
 
     $appoint_time = $_GET['appointment_time'];
+
+
 
     $result = createAppointment_ctr($appointment_date, $appointment_day, $appoint_time);
 
     if($result){
         echo "success";
+        header("location: ../view/admin.php");
     }else{
-        echo "failed";
+        echo "<script>alert('failed')</script>";
+        header("location: ../view/admin.php");
     }
 ?>
