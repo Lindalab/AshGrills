@@ -207,6 +207,12 @@ ALTER TABLE `appointments`
   MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `customer`
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
