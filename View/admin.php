@@ -1,3 +1,8 @@
+<?php
+require("../Functions/getAllCategories.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,7 +155,7 @@
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formEmail">Categories</label>
-                            <input type="email" id="formEmail" name="email" class="form-control" placeholder="Email address" required />
+                            <?php   getAllCategories(); ?>
                         </div>
 
                         <div class="form-outline mb-4">
