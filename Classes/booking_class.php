@@ -2,8 +2,9 @@
     require_once("../Settings/db_class.php");
 
     class Booking extends db_connection{
-
+       
         function create_booking($appointment_id, $s_id, $customer_id, $optional_name, $optional_email){
+            
             $sql = "INSERT INTO `book`(`appointment_id`, `s_id`, `customer_id`, `optional_name`, `optional_email`) VALUES ('$appointment_id','$s_id','$customer_id','$optional_name','$optional_email')";
 
             return $this->db_query($sql);
@@ -15,6 +16,18 @@
             return $this->db_query($sql);
         }
 
+        function insert_into_book_details($appointment_id, $booked_slot_id){
+            $sql = " INSERT INTO `booked_details`(`appoitment_id`, booked_slot_id) VALUES ('$appointment_id', '$booked_slot_id')";
+
+            return $this->db_query($sql);
+        }
+
+        function delete_customer_book($customer_id, $appointment_id, $booked_id){
+            $sql = "DELETE FROM `book` WHERE customer_id = '$customer_id' and appointment_id = $appointment_id and book_id = $booked_id";
+
+            return $this->db_query($sql);
+        }
+        
         function delete_booking($book_id){
             $sql = "DELETE FROM `book` WHERE book_id = '$book_id' ";
 
@@ -24,6 +37,11 @@
         function getOneBooking($book_id){
             $sql = "SELECT * FROM `book` WHERE book_id = '$book_id' ";
             return $this->db_fetch_one($sql);
+        }
+
+        function getOneBookingCustomer($customer_id){
+            $sql = "SELECT * FROM `book` WHERE customer_id = '$customer_id' ";
+            return $this->db_fetch_all($sql);
         }
 
         function getAllBooking(){

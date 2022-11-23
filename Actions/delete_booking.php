@@ -8,7 +8,7 @@
     if($deleted){
         echo "<scipt>alert('success')</script>";
     }else{
-        echo "<scipt>alert('failed')</script>";
+        
     }
 
 ?>

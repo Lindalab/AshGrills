@@ -8,6 +8,7 @@ require('db_cred.php');
  *@author David Sampah
  *@version 1.1
  */
+
 class db_connection
 {
 	//properties
@@ -33,6 +34,10 @@ class db_connection
 		}
 	}
 
+	function getDB(){
+		return $this->db;
+	}
+	
 	//execute a query
 	/**
 	*Query the Database
