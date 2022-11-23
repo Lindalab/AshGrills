@@ -46,7 +46,7 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+233 20 582 5252</a>
+                    <a class="text-body px-2" href="tel:+233 20 582 5252"><i class="fa fa-phone-alt text-primary me-2"></i>+233 20 582 5252</a>
                     <a class="text-body px-2" href="mailto:ashgrill@ashesi.edu.gh"><i class="fa fa-envelope-open text-primary me-2"></i>ashgrill@ashesi.edu.gh</a>
                 </div>
             </div>
@@ -77,62 +77,82 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link active">About</a>
+                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link">Services</a>
                 <a href="appointment.php" class="nav-item nav-link">Appointments</a>
-                <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="../Login/login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Book Now!</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">About</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+    <!-- Carousel Start -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        
-                        <img class="img-fluid" src="img/iconash.png" alt="">
-                        <img class="img-fluid" src="img/ashgrill.png" alt="">
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                <div class="text-center">
+                                        <img src="img/iconash.png" style="width: 185px; height: 100px;"
+                                            alt="Register">
+                                        <h4 class="mt-1 mb-5 pb-1">Login</h4>
+                                    </div>
+
+
+                                    <form action="./View/loginprocess.php" method="POST">
+
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formEmail">Email</label>
+                                            <input type="email" id="formEmail" name="email" class="form-control"
+                                                placeholder="Email address" />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formPassword">Password</label>
+                                            <input type="password" id="formPassword" name="password"
+                                                class="form-control" placeholder="password" />
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <input type="submit"
+                                                class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                class="form-control" name="submit" value="Login" />
+
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Don't have an account?</p>
+                                            <a href="register.php" class="btn btn-primary">Register</a>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h4 class="section-title">About Us</h4>
-                    <h1 class="display-5 mb-4">Your easiest access to all members of the Ashesi community</h1>
-                    <p>AshGrill is the latest hub for Ashesi Student Businesses. We are a friendly and transparent Booking Agency based in Ashesi. We provide businesses an avenue to sell their goods at designated slots on campus. Accessible to the entire Ashesi community, any day of the week! Expand the scope of your clientele.</p>
-              
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
 
 
-    
-        
-
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">

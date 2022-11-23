@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="/View/img/icons/icon-1.png" rel="icon">
+    <link href="img/iconash.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,17 +26,17 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/View/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="/View/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="/View/img/icons/icon-1.png" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/iconash.png" alt="Icon">
     </div>
     <!-- Spinner End -->
 
@@ -46,8 +46,8 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+233205825252</a>
-                    <a class="text-body px-2" href="mailto:info@example.com"><i class="fa fa-envelope-open text-primary me-2"></i>ashgrill@ashesi.edu.gh</a>
+                    <a class="text-body px-2" href="tel:+233 20 582 5252"><i class="fa fa-phone-alt text-primary me-2"></i>+233 20 582 5252</a>
+                    <a class="text-body px-2" href="mailto:ashgrill@ashesi.edu.gh"><i class="fa fa-envelope-open text-primary me-2"></i>ashgrill@ashesi.edu.gh</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -69,133 +69,109 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.php" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="text-primary m-0"><img class="me-3" src="/View/img/iconash.png" alt="Icon">AshGrill</h1>
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0"><img class="me-3" src="img/iconash.png" alt="Icon">AshGrill</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="services.php" class="nav-item nav-link">Services</a>
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Appointment</a>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="../Login/login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Book Now!</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">Services</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Services</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
+    <!-- Carousel Start -->
+
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <img src="img/iconash.png" style="width: 185px; height: 100px;"
+                                            alt="Register">
+                                        <h4 class="mt-1 mb-5 pb-1">Register</h4>
+                                    </div>
 
 
-    <!-- Facts Start -->
-    <div class="container-xxl py-5">
-        <div class="container pt-5">
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                        <div class="fact-icon">
-                            <img src="View/img/icons/icon-2.png" alt="Icon">
-                        </div>
-                        <h3 class="mb-3">Advertise</h3>
-                        <p class="mb-0">Reach and enrich your customer base across Ashesi.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                        <div class="fact-icon">
-                            <img src="View/img/icons/icon-3.png" alt="Icon">
-                        </div>
-                        <h3 class="mb-3">Innovative Solutions</h3>
-                        <p class="mb-0">Your business is the solution to many problems. meet that impromptu need</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                        <div class="fact-icon">
-                            <img src="View/img/icons/icon-4.png" alt="Icon">
-                        </div>
-                        <h3 class="mb-3">Timely Booking</h3>
-                        <p class="mb-0">Secure your spot in under 20 minutes, show up and make mad money! </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Facts End -->
+                                    <form action="../View/registerprocess.php" method="POST">
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formName">Full Name</label>
+                                            <input type="text" id="formEmail" name="name" class="form-control"
+                                                placeholder="full name" required />
+                                        </div>
 
 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Our Services</h4>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="View/img/food.jpg" alt="">
-                        <div class="service-text p-5">
-                            <!-- <img class="mb-4" src="View/img/food.jpg" alt="Icon"> -->
-                            <h3 class="mb-3">Food</h3>
-                            <p class="mb-4">1 hour</p>
-                            <p class="mb-4">GHC50.00</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="View/img/snacks.jpg" alt="">
-                        <div class="service-text p-5">
-                            <!-- <img class="mb-4" src="View/img/snacks.jpg" alt="Icon"> -->
-                            <h3 class="mb-3">Snacks</h3>
-                            <p class="mb-4">1 hour</p>
-                            <p class="mb-4">GHC50.00</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="View/img/clothes.jpg" alt="">
-                        <div class="service-text p-5">
-                            <!-- <img class="mb-4" src="View/img/clothes.jpg" alt="Icon"> -->
-                            <h3 class="mb-3">Clothes</h3>
-                            <p class="mb-4">1 hour</p>
-                            <p class="mb-4">GHC50.00</p>
-                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Book Now</a>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formEmail">Email</label>
+                                            <input type="email" id="formEmail" name="email" class="form-control"
+                                                placeholder="Email address" required />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formPassword">Password</label>
+                                            <input type="password" id="formPassword" name="password"
+                                                class="form-control" required />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formCountry">Telephone Number</label>
+                                            <input type="number" id="formCountry" name="number" class="form-control"
+                                                placeholder="Country" />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formCity">Business Name</label>
+                                            <input type="text" id="formCity" name="business_name" class="form-control"
+                                                placeholder="City" />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formContact">Student ID</label>
+                                            <input type="text" id="formContact" name="student_id" class="form-control"
+                                                placeholder="Contact" />
+                                        </div>
+
+                                        </div>
+
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <input type="submit"
+                                                class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                class="form-control" name="submit" value="Register" />
+
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Already have an account?</p>
+                                            <a href="login.php" class="btn btn-primary">Login</a>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
+    </section>
 
 
     <!-- Footer Start -->
@@ -246,7 +222,7 @@
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-
+                        <br> Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                 </div>
             </div>

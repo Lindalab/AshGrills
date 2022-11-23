@@ -6,9 +6,9 @@ include ('../Controllers/customer_controller.php');
 /**
  * Get the data from the login form and pass it ot the Login controller function
  */
-if (isset($_POST['Login'])){
-    $email = $_POST['Email'];
-    $Password = $_POST['Password'];
+if (isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $Password = $_POST['password'];
 
     $check = select_customer_ctr($c_email,$c_pass);
     

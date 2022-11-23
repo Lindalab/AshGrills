@@ -79,16 +79,11 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="services.php" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="appointment.php" class="dropdown-item active">Booking</a>
-                        
-                </div>
+                <a href="services.php"  class="nav-item nav-link">Services</a>
+                <a href="appointment.php" class="nav-item nav-link active">Appointments</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="appointment.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
+            <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>
     </nav>
     <!-- Navbar End -->

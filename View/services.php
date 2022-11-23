@@ -78,17 +78,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Home</a>
-                <a href="about.php" class="nav-item nav-link active">About</a>
-                <a href="services.php" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="appointment.php" class="dropdown-item">Booking</a>
-                       </div>
-                </div>
+                <a href="about.php"  class="nav-item nav-link">About</a>
+                <a href="services.php" class="nav-item nav-link active">Services</a>
+                <a href="services.php" class="nav-item nav-link">Appointments</a>
+                
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="appointment.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
+            <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -109,47 +105,17 @@
     </div>
     <!-- Page Header End -->
 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Our Services</h4>
-            </div>
-           
-            <div class="row g-4">
-            
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <?php 
-        require("../Controlllers/service.php");
 
-        $service = select_snacks_ctr();
+    <!-- About Start -->
+    
+    <!-- About End -->
 
-        foreach($service as $item){
-            ?>  
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img src="../Images/service<?php echo $result[$i]['service_image'];?>" class="bg-img">
-                        <div class="service-text p-5">
-                            <!-- <img class="mb-4" src="img/food.jpg" alt="Icon"> -->
-                            <h3 class="mb-3"><?php echo ($item['service'])?></h3>
-                            <p class="mb-4"><?php echo ($item['time'])?> hour</p>
-                            <p class="mb-4">GHC <?php echo ($item['price'])?></p>
-                            <a class="btn" href="appointment.php"><i class="fa fa-plus text-primary me-3"></i>Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
-               
-            </div>
-           
-        </div>
 
+    
         
-    </div>
-    <!-- Service End -->
 
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+   <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -196,7 +162,7 @@
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-
+                        <br> Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                 </div>
             </div>
