@@ -81,9 +81,9 @@
                 <!-- <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link " >Services</a> -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalService">
-  Add a service
-</button>
+                <a type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModalService">
+                Add a service   
+                </a>
                 </div>
                 <!-- <a href="contact.php" class="nav-item nav-link active">Contact</a> -->
             </div>
@@ -193,7 +193,60 @@
 
 
 <!-- Modal -->
+<div class="modal fade" id="exampleModalService" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
 
+                                <form action="../Login/register_process.php" method="GET">
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formName">Serivce Name</label>
+                                            <input type="text" id="formEmail" name="service_name" class="form-control"
+                                                placeholder="full name" required />
+                                        </div>
+
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formEmail">Categories</label>
+                                            <input type="email" id="formEmail" name="email" class="form-control"
+                                                placeholder="Email address" required />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formPassword">Price</label>
+                                            <input type="password" id="formPassword" name="price"
+                                                class="form-control" required />
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="formCountry">Service Image</label>
+                                            <input type="file" id="formCountry" name="service_image" class="form-control"
+                                                placeholder="Country" />
+                    </div>
+
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <input type="submit"
+                                                class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                                class="form-control" name="submit" value="Register" />
+
+                                        </div>
+                                        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Create Service</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Contact End -->
 
 
@@ -252,7 +305,7 @@
                         &copy; <a href="#">AshGrill</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <!--/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */-->
                         Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                         <br> Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>

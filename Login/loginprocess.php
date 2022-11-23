@@ -26,7 +26,6 @@ if (isset($_POST['submit'])) {
             $_SESSION['userLogin'] = true;
             if($_SESSION['user_role'] == 1 ){
                 header("location:../View/admin.php");
-
                 
             }
             else{
