@@ -14,6 +14,11 @@
             return $this->db_fetch_all($sql);
         }
 
+        function getAllServiceCat(){
+            $sql="SELECT `service.s_id` as s_id, `service.service_name` as s_name ,service.service_image,service.price, categories.cat_name FROM `service`,categories WHERE service.cat_id=categories.cat_id;";
+            return $this->db_fetch_all($sql);
+        }
+
         function getOneService($s_id){
             $sql = "SELECT * FROM `service` WHERE `s_id`='$s_id' ";
             return $this->db_fetch_one($sql);

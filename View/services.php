@@ -1,3 +1,6 @@
+<?php
+require("../Functions/display_service.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +83,7 @@
                 <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.php"  class="nav-item nav-link">About</a>
                 <a href="services.php" class="nav-item nav-link active">Services</a>
-                <a href="services.php" class="nav-item nav-link">Appointments</a>
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
                 
                 <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
             </div>
@@ -107,6 +110,7 @@
 
 
     <!-- About Start -->
+    <?php showServicesUsers_fnc(); ?>
     
     <!-- About End -->
 
