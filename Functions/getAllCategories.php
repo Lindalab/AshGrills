@@ -1,8 +1,25 @@
 <?php
-require("");
+require("../Controllers/service_controller.php");
 
 
-function getAllCategories(){}
-function getcatRow_fnc(){}
+function getAllCategories(){
+    $cats=getAllCategory_ctr();
+    echo "
+    <select class='custom-select' name='mybrand' id='mybrand' >
+    ";
+    foreach($cats as $categories){
+        $catid=$categories['cat_id'];
+        $catname=$categories['cat_name'];
+        getcatRow_fnc($catid,$catname);
+    }
+    echo "</select>";
+}
+function getcatRow_fnc($catid,$catname){
+    echo "
+    <option value='$catid'>$catname</option>
+    
+    ";
+
+}
 
 ?>
