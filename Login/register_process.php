@@ -11,8 +11,8 @@
     $user_role=2;
 
     $newpassword= password_hash($password, PASSWORD_DEFAULT);
-
-    if(checkIfEmailExist_ctr($email)===NULL){
+    
+    if(checkIfEmailExist_ctr($email ,$number, $student_id)===NULL){
         $addcustomer = customer_register_ctr($name,$email,$newpassword,$number,$businessname,$student_id,$user_role);
 
         echo $addcustomer;
@@ -27,7 +27,7 @@
     }
     else{
         echo "<script>
-        alert('Email already exist');
+        alert('Email Or Phone Number Or Student id already exist');
         </script>";
 
     }

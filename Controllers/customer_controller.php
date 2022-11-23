@@ -24,9 +24,9 @@ function select_customer_ctr($email,$password){
     return $add->select_customer_cls($email,$password);
 }
 
-function checkIfEmailExist_ctr($email){
+function checkIfEmailExist_ctr($email ,$phone, $student_id){
     $add = new customer_class;
-    return $add->checkIfEmailExist($email);
+    return $add->checkIfEmailExist($email ,$phone, $student_id);
 }
 
 function checkAndGetCredentials_ctr($email){

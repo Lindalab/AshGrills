@@ -23,8 +23,8 @@ class customer_class  extends db_connection{
 		return $this->db_fetch_all($mysql);
 	}
 
-	function checkIfEmailExist($email){
-		$sql="SELECT `email` FROM `customer` WHERE  `email`='$email';";
+	function checkIfEmailExist($email ,$phone, $student_id){
+		$sql="SELECT `email` FROM `customer` WHERE  `email`='$email' or number = '$phone' or student_id = '$student_id'";
 		return $this->db_fetch_one($sql);
 	}
 
