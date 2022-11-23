@@ -30,9 +30,8 @@
         }
 
         function createCategories($cat_name){
-            $sql = "INSERT INTO `categories`(`cat_name`) VALUES ('$cat_name') ";
+            $sql = "INSERT INTO `categories`(`cat_name`) VALUE ('$cat_name')";
             return $this->db_query($sql);
-
         }
 
         function getAllCategory(){

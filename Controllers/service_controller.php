@@ -43,6 +43,8 @@ function createCategories_ctr($cat_name){
     return $cat->createCategories($cat_name);
 }
 
+
+
 function getAllCategory_ctr(){
     $cat = new service;
     return $cat->getAllCategory();

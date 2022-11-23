@@ -146,7 +146,7 @@ require("../Functions/getAllCategories.php");
                 <div class="modal-body">
 
 
-                    <form action="../Actions/create_service.php" method="GET">
+                    <form action="../Actions/create_service.php" method="post" enctype="multipart/form-data">
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formName">Serivce Name</label>
                             <input type="text" id="formEmail" name="service_name" class="form-control" placeholder="service name" required />
@@ -165,7 +165,9 @@ require("../Functions/getAllCategories.php");
 
                         <div class="form-outline mb-4">
                             <label class="form-label" for="formCountry">Service Image</label>
-                            <input type="file" id="formCountry" name="service_image" class="form-control" placeholder="Service Image" />
+                            <input type="file" id="formCountry"  class="form-control" placeholder="Service Image"
+                            name="service_image"
+                            />
                         </div>
 
 
@@ -243,7 +245,7 @@ require("../Functions/getAllCategories.php");
                 <form action="" method="GET">
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="formName">Category Name</label>
-                                            <input type="text" id="formEmail" name="service_name" class="form-control"
+                                            <input type="text" id="formEmail" name="cat_name" class="form-control"
                                                 placeholder="Category Name" required />
                                         </div>
 
