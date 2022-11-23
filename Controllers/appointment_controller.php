@@ -20,7 +20,7 @@
         return $appointment->updateAppointment($appointment_id,$appointment_date, $appointment_day, $appoint_time);
     }
 
-    function getAllBooking_ctr(){
+    function getAllAppointment_ctr(){
         $appointment = new Appointment;
 
         return $appointment->getAllAppointment();

@@ -1,7 +1,6 @@
-<?php 
-    session_start();
-    require_once("../functions/display_booking.php");
-
+<?php
+session_start();
+$total = $_POST['total'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +34,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="../JS/payment.js"></script>
+
 </head>
 
 <body>
@@ -51,7 +53,7 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+233 20 582 5252</a>
+                    <a class="text-body px-2" href="tel:+233 20 582 5252"><i class="fa fa-phone-alt text-primary me-2"></i>+233 20 582 5252</a>
                     <a class="text-body px-2" href="mailto:ashgrill@ashesi.edu.gh"><i class="fa fa-envelope-open text-primary me-2"></i>ashgrill@ashesi.edu.gh</a>
                 </div>
             </div>
@@ -82,155 +84,55 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.php" class="nav-item nav-link">Home</a>
+                <!-- <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
-                <a href="services.php"  class="nav-item nav-link">Services</a>
-                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
-                <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
+                <a href="services.php" class="nav-item nav-link">Services</a>
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a> -->
             </div>
-            <a href="<?php if(isset($_SESSION['isLogin'])) 
-                                echo "login.php";
-            
-            ?>" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
-
-            
+            <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
+        </div>
+        <a href="../Login/login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Book Now!</a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">Booking</h1>
-            <table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Day</th>
-      <th scope="col">Date</th>
-      <th scope="col">Time</th>
-      <th scope="col">Service</th>
-      <th scope="col">Price</th>
-      <th scope="col">Cancel Booking</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
-        $total = 0;
-        if(isset($_SESSION['customerId'])){
-            $total = displayAllBooking($_SESSION['customerId']);
-        }
-    
-    ?>
-    
-  </tbody>
-</table>
-            <!-- <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Booking</li>
-                </ol>
-            </nav> -->
-        </div>
-    </div>
-    <!-- Page Header End -->
+    <!-- Carousel Start -->
 
 
-    <!-- Appointment Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
- 
-                    <h4 class="section-title">Booking</h4>
-                    <h1 class="display-5 mb-4">Book a Slot for Your Businesss</h1>
-                    
-                    <p class="mb-4"></p>
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="d-flex">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light" style="width: 65px; height: 65px;">
-                                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                <script src="https://js.paystack.co/v1/inline.js"></script>
+                                    <form>
+                                        <input id='email-address' value =" <?php echo $_SESSION['customerEmail']; ?>" readonly></input>
+                                        <h4> Total GHC </h4>
+                                        <input type="text" id='amount' readonly value = "<?php echo $total; ?>"></input >
+                                       
+
+                                        <button type="submit" class="btn btn-primary" onclick="payWithPaystack(event)">Make Payment</button>
+                                    </form>
                                 </div>
-                                <div class="ms-4">
-                                    <p class="mb-2">Call Us Now</p>
-                                    <h3 class="mb-0">+233 20 582 5252</h3>
-                                </div>
+
+
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light" style="width: 65px; height: 65px;">
-                                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <p class="mb-2">Mail Us Now</p>
-                                    <h3 class="mb-0">ashgrill@ashesi.edu.gh</h3>
-                                </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form action="payment_page.php" method="POST">
-                    <div><p>TOTAL GHC</p></div>
-                    <div class="col-12 col-sm-6">
-                            <input type="text"  class="form-control" placeholder="Your Name" name ='total' value="<?php echo $total ?>" style="height: 55px;" readonly>
-                    </div>
-                    <div>
-                        <span>&nbsp;</span>
-                    </div>
-                    <!-- <div class="row g-3">
-                       
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Your Name" style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" placeholder="Your Email" style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Your Mobile" style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <select class="form-select" style="height: 55px;">
-                                <option selected>Choose Service</option>
-                                <option value="1">Food </option>
-                                <option value="2">Snacks</option>
-                                <option value="3">Clothes</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="date" id="date" data-target-input="nearest">
-                                <input type="text"
-                                    class="form-control datetimepicker-input"
-                                    placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="time" id="time" data-target-input="nearest">
-                                <input type="text"
-                                    class="form-control datetimepicker-input"
-                                    placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                        </div> -->
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
-                        </div>
-
-                    </div>
-                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Appointment End -->
-        
+    </section>
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">

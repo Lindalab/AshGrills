@@ -6,9 +6,10 @@
     $deleted = delete_booking_ctr($book_id);
 
     if($deleted){
-        echo "<scipt>alert('success')</script>";
+        header("location: ../View/booking.php");
     }else{
-        
+        echo "failed";
+        header("location: ../View/booking.php");
     }
 
 ?>

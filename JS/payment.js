@@ -1,12 +1,12 @@
-const paymentForm = document.getElementById('paymentForm');
-paymentForm.addEventListener("submit", payWithPaystack, false);
+// const paymentForm = document.getElementById('paymentForm');
+// paymentForm.addEventListener("submit", payWithPaystack, false);
 function payWithPaystack(e) {
   e.preventDefault();
-
+  console.log(document.getElementById("amount").value * 100)
   let handler = PaystackPop.setup({
     key: 'pk_live_bd5356607a881f3a0d6843b75d3172b74b9675cd', // Replace with your public key
-    email: document.getElementById("email-address").value,
-    amount: document.getElementById("amount").value * 100,
+    email:   'eric.gadzi@ashesi.edu.gh', //document.getElementById("email-address").value,
+    amount: parseInt(document.getElementById("amount").value * 100),
     currency: 'GHS',
     ref: ''+Math.floor(Math.random() * 100000000  + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
