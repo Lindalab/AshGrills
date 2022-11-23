@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,13 +81,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <!-- <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
                 <a href="about.php" class="nav-item nav-link">About</a>
                 <a href="services.php"  class="nav-item nav-link">Services</a>
-                <a href="appointment.php" class="nav-item nav-link active">Appointments</a> -->
+                <a href="appointment.php" class="nav-item nav-link">Appointments</a>
                 <!-- <a href="contact.php" class="nav-item nav-link">Contact</a> -->
             </div>
-            <a href="login.php" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
+            <a href="<?php if(isset($_SESSION['isLogin'])) 
+                                echo "login.php";
+            
+            ?>" class="btn btn-primary py-2 px-4 d-none d-lg-block">Booking</a>
         </div>
     </nav>
     <!-- Navbar End -->
