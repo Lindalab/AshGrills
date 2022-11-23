@@ -15,7 +15,7 @@
         }
 
         function getAllServiceCat(){
-            $sql="SELECT `service.s_id` as s_id, `service.service_name` as s_name ,service.service_image,service.price, categories.cat_name FROM `service`,categories WHERE service.cat_id=categories.cat_id;";
+            $sql="SELECT service.s_id , service.service_name, service.service_image ,service.price , categories.cat_name  FROM service,categories WHERE service.cat_id=categories.cat_id ";
             return $this->db_fetch_all($sql);
         }
 
@@ -35,8 +35,9 @@
         }
 
         function createCategories($cat_name){
-            $sql = "INSERT INTO `categories`(`cat_name`) VALUE ('$cat_name')";
+            $sql = "INSERT INTO `categories`(`cat_name`) VALUES ('$cat_name') ";
             return $this->db_query($sql);
+
         }
 
         function getAllCategory(){

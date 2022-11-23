@@ -1,4 +1,4 @@
-<form action="" method="GET">
+                                    <form action="" method="GET">
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="formName">Appointment Date</label>
                                             <input type="date" id="formEmail" name="appointment_date" class="form-control"
@@ -27,7 +27,7 @@
                                                 class="form-control" name="submit" value="Register" />
 
                                         </div>
-                                        </form>
+                                    </form>
 
 
                                         -----------------------------------------------------------------------------
